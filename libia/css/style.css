@@ -1,3 +1,66 @@
+/* Tipo de letra de Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Roboto:wght@300&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* navbar start */
+
+.navbar {
+    font-weight: 800;
+}
+
+
+/* navbar end */
+
+
+/* header home page start */
+
+h2 {
+    font-size: 25px;
+    color: rgb(47, 51, 43);
+}
+
+h3 {
+    font-size: 24px;
+    color: rgb(47, 51, 43);
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 800;
+}
+
+
+/* header home page end */
+
+
+/* Firts start */
+
+.card {
+    border: 0;
+    box-shadow: none;
+}
+
+.firts i {
+    font-size: 55px;
+}
+
+.img-ic1 {
+    color: red;
+}
+
+.img-ic2 {
+    color: blue;
+}
+
+
+/* Firts end */
+
+
 /* Footer Start */
 
 .b-example-divider {
