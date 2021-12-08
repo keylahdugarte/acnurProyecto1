@@ -1,16 +1,37 @@
 /* Tipo de letra de Google Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;900&display=swap');
 * {
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+section {
+    margin-top: 100px;
 }
 
 
 /* navbar start */
 
+.container-fluid a {
+    margin: 10px;
+    color: #5b4dd4;
+}
+
+.navbar .btn {
+    color: #fff;
+}
+
 .navbar {
-    font-weight: 800;
+    margin-left: 65px;
+    font-weight: 900;
+}
+
+.navbar:hover {
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 30px;
 }
 
 
@@ -34,6 +55,15 @@ h1 {
     font-weight: 800;
 }
 
+.iconos-app-1:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0px 0px 15px 15px #c940b2;
+    -webkit-box-shadow: 0px 0px 15px 15px #e75ed0;
+    transform: rotate(350deg);
+    -webkit-transform: rotate(360deg);
+}
+
 
 /* header home page end */
 
@@ -47,21 +77,81 @@ h1 {
 
 .firts i {
     font-size: 55px;
+    margin-left: 100px;
+}
+
+.firts .card {
+    box-shadow: 2px 2px 7px rgb(218, 211, 211);
 }
 
 .img-ic1 {
-    color: red;
+    color: rgb(252, 96, 96);
 }
 
 .img-ic2 {
-    color: blue;
+    color: rgb(112, 112, 211);
+}
+
+.img-ic3 {
+    color: rgb(69, 241, 184);
 }
 
 
 /* Firts end */
 
 
+/* second start */
+
+.second i {
+    font-size: 50px;
+    margin: 25px;
+}
+
+.second img {
+    height: 100%;
+}
+
+.second .img-sec1 {
+    color: rgb(185, 31, 31);
+}
+
+.second .img-sec2 {
+    color: rgb(163, 209, 77);
+}
+
+.second .img-sec3 {
+    color: rgb(112, 112, 211);
+}
+
+.second .img-sec4 {
+    color: rgb(69, 241, 184);
+}
+
+
+/* second end */
+
+
 /* third part start */
+
+.third {
+    box-shadow: 2px 2px 5px #999;
+}
+
+.third p {
+    font-size: 15px;
+}
+
+.third .img-cop {
+    margin-left: 75px;
+}
+
+.third h2 {
+    font-size: 30px;
+}
+
+.third h3 {
+    color: rgb(207, 199, 199);
+}
 
 .lineas-one {
     margin-bottom: 95px;
@@ -94,6 +184,10 @@ h1 {
 
 /* five part start */
 
+.five {
+    box-shadow: 2px 2px 5px #999;
+}
+
 .five i {
     font-size: 55px;
     margin-top: 10px;
@@ -105,6 +199,15 @@ h1 {
 
 .five p {
     font-size: 15px;
+}
+
+.five .unico-h2 {
+    font-size: 35px;
+}
+
+.five .unico-p {
+    font-size: 25px;
+    color: rgb(207, 199, 199);
 }
 
 .img-verde {
@@ -215,6 +318,21 @@ h1 {
 /* eight part end */
 
 
+/* nosotras start */
+
+.tarjeta {
+    margin-left: 130px;
+}
+
+.nosotras h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+
+/* nosotras end */
+
+
 /* Footer Start */
 
 .redes-sociales a {
@@ -238,5 +356,5 @@ h1 {
 
 /*Footer End  */
 
-/*seguridad*/
 
+/*seguridad*/
