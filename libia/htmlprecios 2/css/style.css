@@ -17,14 +17,14 @@ section {
 
 .navbar .icons a,
 .navbar .icons div {
-  font-size: 2rem;
-  cursor: pointer;
-  color: #5b4dd4;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #5b4dd4;
 }
 
 .navbar .icons a:hover,
 .navbar .icons div:hover {
-  color: #000;
+    color: #000;
 }
 
 .navbar .btn {
@@ -346,7 +346,7 @@ h1 {
 
 /* parte superior precio start*/
 
-.superior{
+.superior {
     width: 100%;
     height: 400px;
     margin-top: 20px;
@@ -366,19 +366,36 @@ h1 {
     color: #fff;
 }
 
-/* tarjeta precio end */
 
-/* .tarjeta-productos{
+/* tarjeta precio start */
 
-   
-} */
+.card {
+    border-radius: 41px;
+    background: #e0e0e0;
+    box-shadow: 10px 33px 44px #7b7b7b, -33px -33px 44px #ffffff;
+}
+
+.card-body {
+    width: 100%;
+    height: 300px;
+    font-size: 15px;
+    margin-bottom: 70px;
+    padding: 50px;
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+.card-body .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 65%;
+    margin-left: -104.5px;
+}
 
 
-
-
-/* tarjeta precio starts  */
-
-
+/* tarjeta precio end  */
 
 
 /* packages section end */
