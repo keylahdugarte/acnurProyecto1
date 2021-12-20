@@ -1,0 +1,32 @@
+.couleur {
+    background-color:  #764cc5;
+    text-decoration-color: white;
+}
+.fond{
+    background-color: rgb(241, 238, 238);
+}
+
+.centrar{
+    justify-content: center;
+}
+.container-fluid a {
+    margin: 10px;
+    color: #764cc5;
+}
+
+.navbar .btn {
+    color: #fff;
+}
+
+.navbar {
+    margin-left: 65px;
+    font-weight: 900;
+}
+
+.navbar:hover {
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
