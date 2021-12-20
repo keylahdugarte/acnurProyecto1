@@ -4,27 +4,32 @@ const footer = document.getElementById('footer');
 const templateCard = document.getElementById('template-card').content;
 const templateFooter = document.getElementById('template-footer').content;
 const templateCarrito = document.getElementById('template-carrito').content;
+const searchBar = document.getElementById('searchBar'); //el buscador 
+const inputBuscador = document.getElementById('buscador');  //boton del buscador
 const fragment = document.createDocumentFragment();
+
 const url = 'https://my-json-server.typicode.com/margaritasing/productosJson/response'
 let carrito = {};
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { //pinta los items del carrito
     fetchData()
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
     }
 })
-card.addEventListener('click', e => {
+card.addEventListener('click', e => { //agrega los items al carrito
     addCarrito(e)
 })
 
-items.addEventListener('click', e => {
+items.addEventListener('click', e => { // elimina todos los items del carrito
     btnAccion(e)
 })
 
 
-const fetchData = async() => {
+
+
+const fetchData = async() => { //consume el json por medio de async-await (Promesa)
     try {
         const res = await fetch(url)
         const data = await res.json()
@@ -35,6 +40,9 @@ const fetchData = async() => {
     }
 }
 
+
+
+//Accion de pintar todos los atributos que tienen las tarjetas que muestran los productos
 const pintarCards = data => {
     data.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
@@ -52,14 +60,19 @@ const pintarCards = data => {
 
 }
 
+//accion de agregar  los productos y setCArrito se encarga de que estos no se repitan
 const addCarrito = e => {
     if (e.target.classList.contains('boton')) {
         setCarrito(e.target.parentElement)
 
     }
     e.stopPropagation()
+
+    alertasMensajes()
 }
 
+//modifica el contenido del carrito para que los productos no se repitan,
+//utilizando el id para este proceso
 const setCarrito = objeto => {
 
     const producto = {
@@ -88,11 +101,13 @@ const setCarrito = objeto => {
 
 }
 
+//todos los atributos del carrito se pintan por medio de esta funcion 
+
 const pintarCarrito = () => {
     console.log(carrito)
     items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
-        templateCarrito.querySelector('th').textContent = producto.id
+        templateCarrito.querySelector('th').textContent = producto.id.substr(1,2)
         templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
         templateCarrito.querySelector('.boton-uno').dataset.id = producto.id
@@ -112,6 +127,8 @@ const pintarCarrito = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+
+//Accion de establecer el total y cambiar el estado del carrito cuando este vacio
 const pintarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
@@ -134,8 +151,9 @@ const pintarFooter = () => {
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () => {
         carrito = {}
-        pintarCarrito()
+        pintarCarrito() //Se pinta nuevamente el carrito para recuperar los elementos que estan dentro de las card
     })
+    
 }
 
 const btnAccion = e => {
@@ -147,7 +165,7 @@ const btnAccion = e => {
         pintarCarrito()
     }
 
-
+    //disminuir el numero de productos en el carrito
     if (e.target.classList.contains('btn-danger')) {
         const producto = carrito[e.target.dataset.id]
         producto.cantidad--
@@ -159,7 +177,56 @@ const btnAccion = e => {
 
     }
 
-
-
     e.stopPropagation()
 }
+
+/* const addLocalStorage = () => {
+    localStorage.setItem('carrito', JSON.stringify(carrito))
+  }
+  
+  window.onload = function(){
+    const storage = JSON.parse(localStorage.getItem('carrito'));
+    if(storage){
+      carrito = storage;
+      pintarCarrito()
+    }
+  } */
+
+  //Mensaje de confirmacion de producto agregado
+
+  const alertasMensajes = () =>{
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Producto Agregado al carrito',
+        showConfirmButton: false,
+        timer: 1500
+      })
+  }
+
+
+
+
+ 
+  console.log(searchBar)
+  searchBar.addEventListener('keyup', (e) =>{
+      console.log(e.target.value);
+  })
+  
+    
+
+/*
+ inputBuscador.addEventListener('click', filtrar) 
+  searchBar.addEventListener('id', (e) => {
+    console.log(searchBar)
+     const searchString = e.target.value.toLowerCase();
+     console.log(searchString)
+     const filterProductos = carrito.filter((producto) => {
+            producto.nombre.toLowerCase().includes(searchString) ||
+            producto.tipo.toLowerCase().includes(searchString)
+        
+     })
+     
+     pintarCards(filterProductos); 
+ }); 
+   */

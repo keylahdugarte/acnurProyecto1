@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- navbar start -->
+    <!-- Encabezado start -->
     <header class="header">
         <nav class="navbar navbar-expand-lg mt-3">
             <div class="container-fluid ">
@@ -28,30 +28,29 @@
           </button>
                 <div class="collapse navbar-collapse justify-content-end  me-5" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-5 me-5 ">
-                        <a class="nav-link active" aria-current="page" href="quienesSomos.html">Quienes Somos?</a>
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Home</a>
+                        <a class="nav-link" href="../../Keylah/quienesSomos.html">¿Quienes Somos?</a>
                         <a class="nav-link" href="#">Precios</a>
-                        <a class="nav-link" href="seguridad.html">Seguridad</a>
-                        <a class="nav-link" href="ayuda.html">Ayuda</a>
+                        <a class="nav-link" href="../../Jeanney/seguridad.html">Seguridad</a>
+                        <a class="nav-link" href="../../Snyre/Ayuda.html">Ayuda</a>
 
                     </div>
                 </div>
-            </div>
+            </div> 
             <div class="icons i">
                 <a href="carrito.html" class="nav-link  fas fa-shopping-cart"></a>
-
             </div>
-            <form class="d-flex ms-3 me-4">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-dark" type="submit">Buscar</button>
-            </form>
+                
+            <div class="d-flex me-4" id="searchWrapper">
+                <input type="text" name="searchBar" id="searchBar"  placeholder="Buscar Producto" />
+                <button class="btn btn-outline-dark ms-3" id="buscador"  type="submit" >Buscar</button>
+            </div>
 
         </nav>
 
-    </header>
-
-
-    <!-- Navbar end -->
-
+ 
+    <!-- Encabezado end -->
+    
     <!-- display start -->
 
     <div class="superior">
@@ -61,60 +60,9 @@
 
 
     <!-- display end -->
-    <!-- Carrito cargado start -->
-    <div class="container">
-        <h4>Carrito de compras</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Acción</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody id="items"></tbody>
-            <tfoot>
-                <tr id="footer">
-                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-                </tr>
-            </tfoot>
-        </table>
-
-
-
-        <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                vaciar todo
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
-    </template>
-
-        <template id="template-carrito">
-      <tr>
-        <th scope="row">id</th>
-        <td>Café</td>
-        <td>1</td>
-        <td>
-            <button class="btn btn-info boton-uno btn-sm">
-                +
-            </button>
-            <button class="btn btn-danger boton-dos btn-sm">
-                -
-            </button>
-        </td>
-        <td>$ <span>500</span></td>
-      </tr>
-    </template>
-
-        <!-- carrito cargado end -->
-
-        <!-- tarjeta precio start -->
+  
+    <div class="container ">
+       <!-- tarjeta precio start -->
 
 
         <h1 class="text-center mt-4 mb-4">Nuestros Productos</h1>
@@ -131,13 +79,63 @@
                   <p class="text-justify">Descripcion</p>
                   <h4>Tipo</h4>
                   <h6>Precio</h6>
-                  <button class="btn boton ">Adquirir</button>
+                  <button class="btn boton boton-more ">Adquirir</button>
                 </div>
               </div>
-            </div>
-         
+            </div>      
        
       </template>
+        <!-- tarjeta precio start -->
+
+        <!-- Carrito cargado start -->
+      <h4 class="h4-carrito">Carrito de compras</h4>
+      <a href="../Autentificacion Firebase/auth.html" class="btn btn-primary">Registrarse</a>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+              </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+              <tr id="footer">
+                  <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+              </tr>
+          </tfoot>
+      </table>
+      <template id="template-footer">
+      <th scope="row" colspan="2">Total productos</th>
+      <td>10</td>
+      <td>
+          <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+              vaciar todo
+          </button>
+      </td>
+      <td class="font-weight-bold">$ <span>5000</span></td>
+  </template>
+
+      <template id="template-carrito">
+    <tr>
+      <th scope="row">id</th>
+      <td>Café</td>
+      <td>1</td>
+      <td>
+          <button class="btn btn-info boton-uno btn-sm">
+              +
+          </button>
+          <button class="btn btn-danger boton-dos btn-sm">
+              -
+          </button>
+      </td>
+      <td>$ <span>500</span></td>
+    </tr>
+  </template>
+
+      <!-- carrito cargado end -->
 
 
 
@@ -161,11 +159,11 @@
             <div class="col-2">
                 <h5>Navegación</h5>
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="quienesSomos.html" class="nav-link p-0 text-muted">Quienes Somos?</a></li>
-                    <li class="nav-item mb-2"><a href="precios.html" class="nav-link p-0 text-muted">Precios</a></li>
-                    <li class="nav-item mb-2"><a href="seguridad.html" class="nav-link p-0 text-muted">Seguridad</a></li>
-                    <li class="nav-item mb-2"><a href="ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
+                    <li class="nav-item mb-2"><a href="../../index.html" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="../../Keylah/quienesSomos.html" class="nav-link p-0 text-muted">Quienes Somos?</a></li>
+                    <li class="nav-item mb-2"><a href="../../libia/htmlprecios 2/precios.html" class="nav-link p-0 text-muted">Precios</a></li>
+                    <li class="nav-item mb-2"><a href="../../Jeanney/seguridad.html" class="nav-link p-0 text-muted">Seguridad</a></li>
+                    <li class="nav-item mb-2"><a href="../../Snyre/Ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
                 </ul>
             </div>
 
@@ -207,7 +205,11 @@
     </footer>
     <!-- Footer End -->
 
+    
 
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <!-- Script de Boostrap -->

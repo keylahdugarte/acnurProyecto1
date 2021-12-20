@@ -14,10 +14,12 @@
     <title>Seguridad</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="../nav-footer.css">
 </head>
 
 <body>
-    <!-- Encabezado start -->
+    <!-- navbar start -->
+ <header class="header">
     <nav class="navbar navbar-expand-lg mt-3">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#">GuaramoExpress</a>
@@ -25,17 +27,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
             <div class="collapse navbar-collapse justify-content-end  me-5" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-5 me-5 ">
-                    <a class="nav-link active" aria-current="page" href="quienesSomos.html">Quienes Somos?</a>
-                    <a class="nav-link" href="precios.html">Precios</a>
-                    <a class="nav-link" href="seguridad.html">Seguridad</a>
-                    <a class="nav-link" href="ayuda.html">Ayuda</a>
-                    <a href="#" class="btn btn-primary" aria-current="page">Robo o Extravio</a>
+                <div class="navbar-nav ">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link" href="../Keylah/quienesSomos.html">¿Quienes somos?</a>
+                    <a class="nav-link" href="../libia/htmlprecios 2/precios.html">Precios</a>
+                    <a class="nav-link" href="#">Seguridad</a>
+                    <a class="nav-link" href="../Snyre/Ayuda.html">Ayuda</a>
+                    <a href="#" class="btn btn-primary active" aria-current="page">Robo o Extravio</a>
+
                 </div>
             </div>
-        </div>
+        </div>            
+        <form class="d-flex me-4">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+
     </nav>
-    <!-- Encabezado end -->
+
+    <!-- Navbar end -->
+
 
 
     <!--Titulo Principal-->
@@ -298,10 +309,10 @@
         <div class="card-header">
             Chat de Consulta
         </div>
-        <div class="card-body">
+        <div class="card-body"> <!-- Pilas aqui cambiar la direccion  -->
             <h5 class="card-title">¿Tienes alguna duda?</h5>
             <p>Estamos para ayudarte no dudes en escribirnos</p>
-            <a href="mailto://guaramoexpress@gmail.com" class="btn btn-primary">Escribenos tu consulta</a>
+            <a href="../libia/Consultas/index.html" class="btn btn-primary">Escribenos tu consulta</a>
         </div>
         <div class="card-footer text-muted">
             Revisa tu e-mail
@@ -309,59 +320,65 @@
     </div>
 
     <!-- Footer start -->
-    <footer class="py-5 mt-5 ms-5  mb-0">
-        <div class="row">
-            <div class="col-2">
-                <h5>Navegación</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-                    <li class="nav-item mb-2"><a href="quienesSomos.html" class="nav-link p-0 text-muted">Quienes Somos?</a></li>
-                    <li class="nav-item mb-2"><a href="precios.html" class="nav-link p-0 text-muted">Precios</a></li>
-                    <li class="nav-item mb-2"><a href="seguridad.html" class="nav-link p-0 text-muted">Seguridad</a></li>
-                    <li class="nav-item mb-2"><a href="ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
-                </ul>
-            </div>
-
-            <div class="col-2">
-                <h5>Legales</h5>
-                <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Regimen de Transparencia</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Usuario Bancario</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Conducta</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Informacion de Usuario Bancario</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cuenta Gratuita Universal</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Gobierno Societario</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Estados Contables</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FATCA</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">De Defensa del Consumidor</a></li>
-                </ul>
-            </div>
-
-            <div class="col-2">
-                <button type="button" class="btn btn-warning btn-lg ms-5">Usuarios Financieros</button>
-            </div>
-
-            <div class="col-4 offset-1">
-                <form>
-                    <h5>Suscríbete a nuestro boletín</h5>
-                    <p>Resumen mensual de lo nuevo y emocionante de nosotros.</p>
-                    <div class="d-flex w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Correo</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Correo">
-                        <button class="btn btn-primary" type="button">Suscribete</button>
-                    </div>
-                </form>
-            </div>
+   <footer class="py-5 mt-5 ms-5  mb-0">
+    <div class="row">
+        <div class="redes-sociales mb-5">
+            GuaramoExpress
+            <a href="www.facebook.com"><i class="fab fa-facebook-square"></i></i></a>
+            <a href="www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a href="instagram.com"><i class="fab fa-instagram"></i></i></a>
+        </div>
+        <div class="col-2">
+            <h5>Navegación</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="../Keylah/quienesSomos.html" class="nav-link p-0 text-muted">¿Quienes Somos?</a></li>
+                <li class="nav-item mb-2"><a href="../libia/htmlprecios 2/precios.html" class="nav-link p-0 text-muted">Precios</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Seguridad</a></li>
+                <li class="nav-item mb-2"><a href="../Snyre/Ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
+            </ul>
         </div>
 
-        <div class="d-flex justify-content-center border-top">
-            <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+        <div class="col-2">
+            <h5>Legales</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Regimen de Transparencia</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Usuario Bancario</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Conducta</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Infourmacion de Usuario Bancario</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cuenta Gratuita Universal</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Gobierno Societario</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Estados Contables</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FATCA</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">De Defensa del Consumidor</a></li>
+            </ul>
         </div>
-    </footer>
 
-    <!-- Footer End -->
+        <div class="col-2">
+            <button type="button" class="btn btn-warning btn-lg ms-5">Usuarios Financieros</button>
+        </div>
+
+        <div class="col-4 offset-1">
+            <fourm>
+                <h5>Suscríbete a nuestro boletín</h5>
+                <p>Resumen mensual de lo nuevo y emocionante de nosotros.</p>
+                <div class="d-flex w-100 gap-2">
+                    <label four="newsletter1" class="visually-hidden">Correo</label>
+                    <input id="newsletter1" type="text" class="fourm-control" placeholder="Correo">
+                    <button class="btn btn-primary" type="button">Suscribete</button>
+                </div>
+            </fourm>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center border-top">
+        <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+    </div>
+</footer>
+<!-- Footer End -->
 
 
+  
 <!-- Script de Scroll -->
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
