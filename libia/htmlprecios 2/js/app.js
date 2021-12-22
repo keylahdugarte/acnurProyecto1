@@ -7,16 +7,23 @@ const templateCarrito = document.getElementById('template-carrito').content;
 const searchBar = document.getElementById('searchBar'); //el buscador 
 const inputBuscador = document.getElementById('buscador');  //boton del buscador
 const fragment = document.createDocumentFragment();
-
 const url = 'https://my-json-server.typicode.com/margaritasing/productosJson/response'
 let carrito = {};
+let data;
+let filterProductos;
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => { //pinta los items del carrito
     fetchData()
     if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
-        pintarCarrito()
+            
     }
+
+   
 })
 card.addEventListener('click', e => { //agrega los items al carrito
     addCarrito(e)
@@ -31,20 +38,23 @@ items.addEventListener('click', e => { // elimina todos los items del carrito
 
 const fetchData = async() => { //consume el json por medio de async-await (Promesa)
     try {
-        const res = await fetch(url)
-        const data = await res.json()
+        var res = await fetch(url)
+        data = await res.json()
         pintarCards(data)
-        console.log(data)
+        
     } catch (error) {
         console.log(error)
     }
 }
 
+console.log(searchBar)
 
+var produCard;
 
 //Accion de pintar todos los atributos que tienen las tarjetas que muestran los productos
-const pintarCards = data => {
-    data.forEach(producto => {
+const pintarCards = (filterProductos) => {
+    console.log(filterProductos)
+    filterProductos.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
         templateCard.querySelector('p').textContent = producto.descripcion
         templateCard.querySelector('img').setAttribute("src", producto.imagen)
@@ -83,11 +93,11 @@ const setCarrito = objeto => {
 
     }
 
-    if (carrito.hasOwnProperty(producto.id)) {
-        producto.cantidad = carrito[producto.id].cantidad + 1
+    if (carrito.hasOwnProperty(producto.id)) { //verifica que el producto no exista, pero si existe
+        producto.cantidad = carrito[producto.id].cantidad + 1 //sino existe por defecto es 1 la cantidad
     }
 
-    carrito[producto.id] = {...producto }
+    carrito[producto.id] = {...producto } //con esto se hace una copia del producto
     pintarCarrito()
 
     /* let arrayIgual = JSON.parse(localStorage.getItem('productos'));
@@ -196,7 +206,7 @@ const btnAccion = e => {
 
   const alertasMensajes = () =>{
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'success',
         title: 'Producto Agregado al carrito',
         showConfirmButton: false,
@@ -207,11 +217,35 @@ const btnAccion = e => {
 
 
 
+
+
+  searchBar.addEventListener('keyup', event => {
+    let searchString = event.target.value.toLowerCase()
+     filterProductos = data.filter(producto => 
+
+        producto.nombre.toLowerCase().includes(searchString) ||  producto.tipo.toLowerCase().includes(searchString)        
+    )
+     // ELIMINO EL CONTENIDO DE CARD
+     while (card.firstChild) {
+        card.removeChild(card.firstChild);
+      }
+    // LE CARGO NUEVO CONTENIDO FILTRADO
+    pintarCards(filterProductos)
+
+    console.log(filterProductos)
+})
+    
+   
+  
+
+
+
+
  
-  console.log(searchBar)
+  /* console.log(searchBar)
   searchBar.addEventListener('keyup', (e) =>{
       console.log(e.target.value);
-  })
+  }) */
   
     
 

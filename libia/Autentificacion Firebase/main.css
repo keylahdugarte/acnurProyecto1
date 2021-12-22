@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;900&display=swap');
+    
+
+
 *:focus {
     outline: none;
   }
@@ -8,9 +12,9 @@
     background: #DDD;
     font-size: 16px;
     color: #222;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-  }
+    font-family: 'Fira Sans', sans-serif;
+}
+  
   
   #login-box {
     position: relative;
@@ -32,11 +36,7 @@
     height: 400px;
   }
   
-  h1 {
-    margin: 0 0 20px 0;
-    font-weight: 300;
-    font-size: 28px;
-  }
+ 
   
   input[type="text"],
   input[type="password"] {
@@ -56,7 +56,7 @@
   
   input[type="text"]:focus,
   input[type="password"]:focus {
-    border-bottom: 2px solid #16a085;
+    border-bottom: 2px solid #5b4dd4;
     color: #16a085;
     transition: 0.2s ease;
   }
@@ -65,7 +65,7 @@
     margin-top: 28px;
     width: 120px;
     height: 32px;
-    background: #16a085;
+    background: #5b4dd4;
     border: none;
     border-radius: 2px;
     color: #FFF;
@@ -89,28 +89,16 @@
     transition: 0.1s ease;
   }
   
-  .or {
-    position: absolute;
-    top: 180px;
-    left: 280px;
-    width: 40px;
-    height: 40px;
-    background: #DDD;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    line-height: 40px;
-    text-align: center;
-  }
   
   .right {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40px;
+    right: 10px;
     box-sizing: border-box;
     padding: 40px;
     width: 300px;
-    height: 400px;
-    background: url('https://goo.gl/YbktSj');
+    height: 300px;
+    background: url('../img/correo.png');
     background-size: cover;
     background-position: center;
     border-radius: 0 2px 2px 0;
@@ -124,38 +112,4 @@
     text-align: center;
   }
   
-  button.social-signin {
-    margin-bottom: 20px;
-    width: 220px;
-    height: 36px;
-    border: none;
-    border-radius: 2px;
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
   
-  button.social-signin:hover,
-  button.social-signin:focus {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-  }
-  
-  button.social-signin:active {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-    transition: 0.2s ease;
-  }
-  
-  button.social-signin.facebook {
-    background: #32508E;
-  }
-  
-  button.social-signin.twitter {
-    background: #55ACEE;
-  }
-  
-  button.social-signin.google {
-    background: #DD4B39;
-  }

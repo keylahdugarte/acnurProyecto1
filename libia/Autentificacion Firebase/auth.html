@@ -1,40 +1,51 @@
 <html>
 <head>
-<title>Autentificación</title>
+<title>Registrate</title>
 <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
   
 <div id="login-box">
-  <div class="left">
-    <h1 id='status'>Sign Up</h1>
+  <div class="left" id="myform">
+    <h1 id='status'>Registrate</h1>
     <input type="text" id="username" name="username" placeholder="Usuario">
-    <input type="text" id="email" name="email" placeholder="E-mail" />
-    <input type="password" id="password" name="password" placeholder="Password" />
+    <input type="text" id="email" name="email" placeholder="Correo" />
+    <input type="password" id="password" name="password" placeholder="Contraseña" />
     
-    <input type="submit" id='sighUp' name="sighUp" value="Sigh Up" />
+    <input type="submit" id='sighUp' name="sighUp"  value="Registrarse" />
 
   </div>
-  <!-- <div class="left">
-    <h1 id='status'>login</h1>
-    <input type="text" id="username" name="username" placeholder="Usuario">
-    <input type="text" id="email" name="email" placeholder="E-mail" />
-    <input type="password" id="password" name="password" placeholder="Password" />
-    
-    <input type="submit" id='login' name="login" value="Login" />
-
-  </div> -->
+ 
   
-  <div class="right">
-    <span class="loginwith">Sign in with<br />social network</span>
+   <div class="right">
+     
+    <!-- <span class="loginwith">Sign in with<br />social network</span>
     
     <button class="social-signin facebook">Log in with facebook</button>
     <button class="social-signin twitter">Log in with Twitter</button>
-    <button class="social-signin google">Log in with Google+</button>
+    <button class="social-signin google">Log in with Google+</button> -->
   </div>
-  <div class="or">OR</div>
+ 
 </div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    alertaSweet = () =>{
+        Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Tu correo ha sido registrado',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+
+  
+    const form =  document.getElementById('sighUp');
+    
+
+</script>
 </body>
 
 <script type="module">
@@ -76,8 +87,11 @@ sighUp.addEventListener('click',(e) => {
           username: username,
           email: email
       })
-
-      alert('user created!');
+      
+      alertaSweet()
+      form.reset
+      
+      
       // ...
     })
     .catch((error) => {
@@ -88,9 +102,11 @@ sighUp.addEventListener('click',(e) => {
     // ..
     });
 
+    
+
 });
 
- login.addEventListener('click',(e)=>{
+ /* login.addEventListener('click',(e)=>{
    var email = document.getElementById('email').value;
    var password = document.getElementById('password').value;
 
@@ -100,11 +116,11 @@ sighUp.addEventListener('click',(e) => {
         const user = userCredential.user;
         alert('User loged in!');
 
-        /* const dt = new Date();
+        const dt = new Date();
          update(ref(database, 'users/' + user.uid),{
           last_login: dt,
         })
- */
+ 
         
         // ...
       })
@@ -116,7 +132,7 @@ sighUp.addEventListener('click',(e) => {
   });
 
  });
-
+ */
 const user = auth.currentUser;
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -132,7 +148,7 @@ onAuthStateChanged(auth, (user) => {
   }
 });
 
-logout.addEventListener('click',(e)=>{
+/* logout.addEventListener('click',(e)=>{
 
    signOut(auth).then(() => {
      // Sign-out successful.
@@ -145,7 +161,7 @@ logout.addEventListener('click',(e)=>{
         alert(errorMessage);
    });
 
-});
+}); */
 
 </script>
 

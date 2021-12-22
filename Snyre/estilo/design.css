@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;900&display=swap');
+* {
+    font-family: 'Fira Sans', sans-serif;
+}
 .couleur {
     background-color:  #764cc5;
     text-decoration-color: white;
 }
-.fond{
-    background-color: rgb(241, 238, 238);
-}
+
 
 .centrar{
     justify-content: center;

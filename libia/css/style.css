@@ -126,8 +126,17 @@ section {
     margin: 25px;
 }
 
+.second .mar-iz{
+    margin-right: 40px;
+}
+
+
+
 .second img {
     height: 100%;
+}
+.second .tit{
+    font-size: 35px;
 }
 
 .second .img-sec1 {
@@ -196,6 +205,17 @@ section {
     border-image: initial;
     border-radius: 25%;
     padding: 3% 4% 3% 4%;
+}
+
+.four .p-d{
+    color: #868484;
+}
+
+.color-dif{
+    font-size: 35px;
+    color: #5b4dd4;
+    font-weight: 600;
+    margin-top: 20px;
 }
 
 

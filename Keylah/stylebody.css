@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;500;900&display=swap');
+
 *{
     margin: 1px;
     padding: 1px;
     box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
 
 }
 .navbar {
@@ -16,10 +19,7 @@
     text-align: center;
 }
 
-body{
-    font-family: 'Fira Sans', sans-serif;
-    /*background: #FAEDF0;*/
-     }
+
 .contenedor{
     width: 100%;
     overflow: hidden;
@@ -38,11 +38,11 @@ body{
     flex-shrink: 0; /*para que no se encoja;*/
 }
 .contenido-slider:nth-child(1){
-    background: #3820a5;
+    background: #5b4dd4;
     color: #F6F2D4;
 }
 .contenido-slider:nth-child(2){
-    background: #c43d71;
+    background: #3820a5;
     color: #F6F2D4;
 }
 .contenido-slider:nth-child(3){
