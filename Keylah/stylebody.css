@@ -38,11 +38,11 @@ body{
     flex-shrink: 0; /*para que no se encoja;*/
 }
 .contenido-slider:nth-child(1){
-    background: #c43d71;
+    background: #3820a5;
     color: #F6F2D4;
 }
 .contenido-slider:nth-child(2){
-    background: #3820a5;
+    background: #c43d71;
     color: #F6F2D4;
 }
 .contenido-slider:nth-child(3){

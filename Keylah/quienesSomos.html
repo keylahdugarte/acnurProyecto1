@@ -15,35 +15,42 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Quienes somos</title>
     <!-- css -->
-    <link rel="stylesheet" href="/libia/css/style.css">
+    <link rel="stylesheet" href="../nav-footer.css">
     <!-- css body-->
     <link rel="stylesheet" href="stylebody.css">
 </head>
 
 <body>
-
-    <!-- Encabezado start -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mt-3 ">
+ <!-- navbar start -->
+ <header class="header">
+    <nav class="navbar navbar-expand-lg mt-3">
         <div class="container-fluid ">
             <a class="navbar-brand" href="#">GuaramoExpress</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
             <div class="collapse navbar-collapse justify-content-end  me-5" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-5 me-5 ">
-                    <a class="nav-link  active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link" href="#">Quienes Somos?</a>
-                    <a class="nav-link" href="precios.html">Precios</a>
-                    <a class="nav-link" href="seguridad.html">Seguridad</a>
-                    <a class="nav-link" href="Ayuda.html">Ayuda</a>
+                <div class="navbar-nav ">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link" href="#">¿Quienes somos?</a>
+                    <a class="nav-link" href="../libia/htmlprecios 2/precios.html">Precios</a>
+                    <a class="nav-link" href="../Jeanney/seguridad.html">Seguridad</a>
+                    <a class="nav-link" href="../Snyre/Ayuda.html">Ayuda</a>
                     <a href="#" class="btn btn-primary active" aria-current="page">Robo o Extravio</a>
 
                 </div>
             </div>
-        </div>
+        </div>            
+        <form class="d-flex me-4">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+        </form>
+
     </nav>
-    <!-- Encabezado end -->
+
+    <!-- Navbar end -->
+
+
     <section class="cuerpo">
         <h1 class="titulo">Somos GuaramoExpress</h1>
     </section>
@@ -124,17 +131,23 @@
 </body>
 
 
-<!-- Footer start -->
-<footer class="py-5">
+   <!-- Footer start -->
+   <footer class="py-5 mt-5 ms-5  mb-0">
     <div class="row">
+        <div class="redes-sociales mb-5">
+            GuaramoExpress
+            <a href="www.facebook.com"><i class="fab fa-facebook-square"></i></i></a>
+            <a href="www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+            <a href="instagram.com"><i class="fab fa-instagram"></i></i></a>
+        </div>
         <div class="col-2">
             <h5>Navegación</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Quienes Somos?</a></li>
-                <li class="nav-item mb-2"><a href="precios.html" class="nav-link p-0 text-muted">Precios</a></li>
-                <li class="nav-item mb-2"><a href="seguridad.html" class="nav-link p-0 text-muted">Seguridad</a></li>
-                <li class="nav-item mb-2"><a href="ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
+                <li class="nav-item mb-2"><a href="../index.html" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">¿Quienes Somos?</a></li>
+                <li class="nav-item mb-2"><a href="./libia/htmlprecios 2/precios.html" class="nav-link p-0 text-muted">Precios</a></li>
+                <li class="nav-item mb-2"><a href="./Jeanney/seguridad.html" class="nav-link p-0 text-muted">Seguridad</a></li>
+                <li class="nav-item mb-2"><a href="./Snyre/Ayuda.html" class="nav-link p-0 text-muted">Ayuda</a></li>
             </ul>
         </div>
 
@@ -144,11 +157,9 @@
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Regimen de Transparencia</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Usuario Bancario</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Conducta</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Informacion de Usuario
-                        Bancario</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Infourmacion de Usuario Bancario</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cuenta Gratuita Universal</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Gobierno Societario</a>
-                </li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Codigo de Gobierno Societario</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Estados Contables</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FATCA</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">De Defensa del Consumidor</a></li>
@@ -160,15 +171,15 @@
         </div>
 
         <div class="col-4 offset-1">
-            <form>
+            <fourm>
                 <h5>Suscríbete a nuestro boletín</h5>
                 <p>Resumen mensual de lo nuevo y emocionante de nosotros.</p>
                 <div class="d-flex w-100 gap-2">
-                    <label for="newsletter1" class="visually-hidden">Correo</label>
-                    <input id="newsletter1" type="text" class="form-control" placeholder="Correo">
+                    <label four="newsletter1" class="visually-hidden">Correo</label>
+                    <input id="newsletter1" type="text" class="fourm-control" placeholder="Correo">
                     <button class="btn btn-primary" type="button">Suscribete</button>
                 </div>
-            </form>
+            </fourm>
         </div>
     </div>
 
@@ -177,4 +188,8 @@
     </div>
 </footer>
 <!-- Footer End -->
+
+
+
+
 </html>
